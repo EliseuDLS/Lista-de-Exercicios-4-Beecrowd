@@ -3,7 +3,7 @@ public class Ex_Beecrowd_1743 {
     final static Scanner LER = new Scanner(System.in);
     public static void main(String[] args) {
 
-        int tamanhoVetor = 6;
+        int tamanhoVetor = 5;
         int[] vetorA = new int[tamanhoVetor];
         int[] vetorB = new int[tamanhoVetor];
         String resposta = "";
@@ -12,7 +12,6 @@ public class Ex_Beecrowd_1743 {
         vetorB = lerVetorB(vetorB);
 
         compararVetor(vetorA, vetorB, resposta);
-        imprimirResposta(resposta);
     }
 
     public static int[] lerVetorA(int[] vetorA) {
@@ -31,8 +30,8 @@ public class Ex_Beecrowd_1743 {
         return vetorB;
     }
 
-    public static String compararVetor(int[] vetorA, int[] vetorB, String resposta) {
-        for (int i = 0; i < 6; i++) {
+    public static void compararVetor(int[] vetorA, int[] vetorB, String resposta) {
+        for (int i = 0; i < vetorA.length; i++) {
             if (vetorA[i] != vetorB[i]) {
                 resposta = "Y";
             } else if (vetorA[i] == vetorB[i]) {
@@ -40,7 +39,7 @@ public class Ex_Beecrowd_1743 {
             }
         }
 
-        return resposta;
+        imprimirResposta(resposta);
     }
 
     public static void imprimirResposta(String resposta) {
