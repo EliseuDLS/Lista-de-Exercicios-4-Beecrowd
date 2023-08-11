@@ -31,12 +31,18 @@ public class Ex_Beecrowd_1743 {
     }
 
     public static void compararVetor(int[] vetorA, int[] vetorB, String resposta) {
+        int cont = 0;
+
         for (int i = 0; i < vetorA.length; i++) {
             if (vetorA[i] != vetorB[i]) {
                 resposta = "Y";
-            } else if (vetorA[i] == vetorB[i]) {
-                resposta = "N";
+            } else {
+                cont++;
             }
+        }
+
+        if (cont > 0) {
+            resposta = "N";
         }
 
         imprimirResposta(resposta);
